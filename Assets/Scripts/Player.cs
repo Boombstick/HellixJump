@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public int PlatformScore = 0;
 
 
+    
+
     public void Bounce()
     {
 

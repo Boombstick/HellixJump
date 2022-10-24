@@ -1,11 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
+    public GameObject LoseScreen;
+    public GameObject WinScreen;
     public Controls Controls;
     public enum State
     {
@@ -24,11 +23,8 @@ public class Game : MonoBehaviour
 
         CurrentState = State.Loss;
         Controls.enabled = false;
+        LoseScreen.SetActive(true);
         Debug.Log("Game Over");
-
-
-        Reloadlevel();
-
     }
 
     public void OnPlayerReachedFinish()
@@ -38,8 +34,8 @@ public class Game : MonoBehaviour
         CurrentState = State.Won;
         Controls.enabled = false;
         LevelIndex++;
-        Debug.Log("You Won!!");
-        Reloadlevel();
+        WinScreen.SetActive(true);
+        Debug.Log("You Won!!");   
     }
     
     public int LevelIndex
@@ -53,8 +49,5 @@ public class Game : MonoBehaviour
     }
     private const string LevelIndexKey = "LevelIndex";
 
-    private void Reloadlevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    
 }
