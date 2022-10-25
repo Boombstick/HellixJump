@@ -49,5 +49,8 @@ public class Game : MonoBehaviour
     }
     private const string LevelIndexKey = "LevelIndex";
 
-    
+    public void Reloadlevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

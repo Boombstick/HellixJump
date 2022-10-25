@@ -39,5 +39,6 @@ public class LevelGenerator : MonoBehaviour
             return new Vector3(0, -DistanceBetweenPlatforms * platformIndex, 0);
         }
     
+   
 }
     
