@@ -48,8 +48,8 @@ GameObject:
   - component: {fileID: 3970087152029586740}
   - component: {fileID: 6587887453593133988}
   m_Layer: 0
-  m_Name: Platform
-  m_TagString: Platform
+  m_Name: FirstPlatform
+  m_TagString: FirstPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
