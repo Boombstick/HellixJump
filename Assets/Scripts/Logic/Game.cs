@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class Game : MonoBehaviour
     public GameObject WinScreen;
     public Controls Controls;
     public GameObject AudioManager;
+    public Material PlayerMaterial;
+    public Slider Slider;
     public enum State
     {
         Playing,
@@ -14,8 +18,21 @@ public class Game : MonoBehaviour
         Loss,
     }
 
-
-
+    public  void Awake()
+    {
+        PlayerMaterial.SetFloat("_Dissole_Amount",0);
+    }
+    IEnumerator Dissolve()
+    {
+        float dissolve = 0;
+        while (dissolve <1)
+        {
+            PlayerMaterial.SetFloat("_Dissole_Amount", dissolve);
+            dissolve += 0.01f;
+            yield return new WaitForSeconds(0.01f);
+        }
+        
+    }
    
     public State CurrentState { get; private set; }
     public void OnPlayerDied()
@@ -24,9 +41,15 @@ public class Game : MonoBehaviour
 
         CurrentState = State.Loss;
         Controls.enabled = false;
+        StartCoroutine(Dissolve());
+        Invoke("ScreenOfLose", 1f);
+        Debug.Log("Game Over");
+    }
+
+    private void ScreenOfLose()
+    {
         LoseScreen.SetActive(true);
         AudioManager.SetActive(false);
-        Debug.Log("Game Over");
     }
 
     public void OnPlayerReachedFinish()

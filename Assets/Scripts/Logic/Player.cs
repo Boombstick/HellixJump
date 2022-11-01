@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public AudioManager AudioManager;
 
 
-    
+
 
     public void Bounce()
     {
@@ -40,11 +40,12 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Platform")
         {
+            PlatformScore++;
             AudioManager.PlatformBreak();
         }
-        
+
     }
-    
+  
 }
  
 
