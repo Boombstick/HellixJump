@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeColorOnPlayer : MonoBehaviour
+public class GradientOnPlayer : MonoBehaviour
 {
     public Material DissolveMaterial;
     public Slider Slider;

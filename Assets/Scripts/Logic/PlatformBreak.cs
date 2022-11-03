@@ -9,6 +9,7 @@ public class PlatformBreak : MonoBehaviour
     public float Radius;
     public float Force;
     public Rigidbody Rigidbody;
+    public ParticleSystem ParticleSystem;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class PlatformBreak : MonoBehaviour
             {
                 Rigidbody.AddExplosionForce(Force, transform.position, Radius);
             }
+            
             Destroy(gameObject, 1f);
 
         }

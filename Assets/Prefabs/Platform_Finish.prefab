@@ -173,6 +173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Finish
       objectReference: {fileID: 0}
+    - target: {fileID: 8887888689114091539, guid: afd9fca02b268a14584c13e95ff633ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9066751934230971616, guid: afd9fca02b268a14584c13e95ff633ec, type: 3}
       propertyPath: Rigidbody
       value: 

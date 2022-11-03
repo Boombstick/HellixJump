@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     public Platform platform;
     public int PlatformScore = 0;
     public AudioManager AudioManager;
-
-
+    public ParticleSystem ParticleSystemOfWin;
+    public ParticleSystem ParticleSystemOfLose;
 
 
     public void Bounce()
@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     public void ReachFinish()
     {
+        ParticleSystemOfWin.Play();
         Game.OnPlayerReachedFinish();
         Rigidbody.velocity = Vector3.zero;
 
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        ParticleSystemOfLose.Play();
         Game.OnPlayerDied();
         Rigidbody.velocity = Vector3.zero;
     }
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Platform")
         {
+
             PlatformScore++;
             AudioManager.PlatformBreak();
         }

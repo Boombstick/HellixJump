@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sector
       objectReference: {fileID: 0}
+    - target: {fileID: 1856771478120262900, guid: 7191112fbab272543a0775fded8888ca, type: 3}
+      propertyPath: lengthInSec
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7191112fbab272543a0775fded8888ca, type: 3}
 --- !u!4 &1843848119928108957 stripped

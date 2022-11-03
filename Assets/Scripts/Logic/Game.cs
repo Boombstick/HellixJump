@@ -7,9 +7,11 @@ public class Game : MonoBehaviour
 {
     public GameObject LoseScreen;
     public GameObject WinScreen;
-    public Controls Controls;
     public GameObject AudioManager;
+    public ParticleSystem ParticleSystem;
+    public Material PlatformMaterial;
     public Material PlayerMaterial;
+    public Controls Controls;
     public Slider Slider;
     public enum State
     {
@@ -55,15 +57,20 @@ public class Game : MonoBehaviour
     public void OnPlayerReachedFinish()
     {
         if (CurrentState != State.Playing) return;
-        
+
         CurrentState = State.Won;
         Controls.enabled = false;
         LevelIndex++;
+        Invoke("ScreenOfWin", 0.5f);
+        Debug.Log("You Won!!");
+    }
+
+    private void ScreenOfWin()
+    {
         WinScreen.SetActive(true);
         AudioManager.SetActive(false);
-        Debug.Log("You Won!!");   
     }
-    
+
     public int LevelIndex
     {
         get => PlayerPrefs.GetInt(LevelIndexKey, 0);
