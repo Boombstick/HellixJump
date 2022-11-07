@@ -12536,8 +12536,8 @@ MonoBehaviour:
   - {fileID: 8828833528191246053, guid: a86562d82cbc3a145bde84fff0c41c44, type: 3}
   - {fileID: 8828833528191246053, guid: 89406c70d5f3bde4aa6916f00ca35830, type: 3}
   - {fileID: 8828833528191246053, guid: 8df55c757921ec54a80a3a36760c5ed3, type: 3}
-  MinPlatform: 2
-  MaxPlatform: 3
+  MinPlatform: 13
+  MaxPlatform: 22
   DistanceBetweenPlatforms: 1.5
   FinishPlarform: {fileID: 1560066952}
   CentreRoot: {fileID: 138859667}
