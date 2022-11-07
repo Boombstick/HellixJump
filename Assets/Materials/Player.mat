@@ -89,7 +89,7 @@ Material:
     - _DrawOrder: 0
     - _DstBlend: 0
     - _Edge1: 0
-    - _Edge2: 1
+    - _Edge2: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.59
     - _GlossyReflections: 1
